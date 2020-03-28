@@ -1,0 +1,58 @@
+---
+title: 'MA391 Homework #1'
+author: "Alexander Enriquez"
+date: "3/27/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Problem 5
+**a)**
+Given that 2,050 emergency calls are received in a one-year period, that averages out to 2,050/12 = 170.833 calls a month.
+
+**b)**
+With n as our estimated value of 170.833 and lambda as 171, we find that the range of normal variation for the number of emergency calls recieved in one year is between 0.955 and 1.043. 
+
+**c)**
+Since the interval (171/lambda) +/- 2*Sqrt(171)/lambda contains 1 when lambda is between 145 and 197.
+
+**d)**
+
+
+## Problem 6
+
+**a)**
+To find the expected value of Nt, we integrate the density function multiplied by n with limits of negative infinity to infinity. And likewise integrate to find the variance. By definition, the Poisson distribution is the rate multiplied by the time.
+
+**b)**
+We want to know the probability of deviating from the mean by as much as 18 so we check both adding and subtracting 18.
+```{r 6a}
+dpois(171+18,171)
+dpois(171-18,171)
+```
+**c)**
+For this problem, we determine at what values of x does the poisson distribution yeild a 0.05 probability. This will tell us the 95% distribution.
+```{r 6c}
+x = seq(0,18)
+upperx = dpois(171+x,171)
+lowerx = dpois(171-x,171)
+ans = data.frame(num = x,upperx = upperx, lowerx = lowerx)
+ans
+```
+**d)**
+
+## Problem 11
+**a)**
+We begin by defining our variables:
+X = 
+
+**b)**
+
+**c)**
+
+**d)**
+
+**e)**
